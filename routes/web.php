@@ -7,4 +7,10 @@ use App\Http\Controllers\PortfolioController;
 //     return view('welcome');
 // });
 
-Route::get('/api/list', [PortfolioController::class, 'index']);
+Route::prefix('api')->group(function () {
+    Route::get('list', [PortfolioController::class, 'index']);
+    Route::get('getCategories', [PortfolioController::class, 'getCategories']);
+});
+
+
+//

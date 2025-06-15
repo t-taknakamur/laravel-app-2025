@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Portfolio;
+use App\Models\PortfolioCategory;
 
 class PortfolioController extends Controller
 {
@@ -18,6 +19,11 @@ class PortfolioController extends Controller
         logger($portfolios = Portfolio::all()->toArray());
 
         return response()->json($portfolios);
+    }
+
+    public function getCategories()
+    {
+        return response()->json(PortfolioCategory::all());
     }
 
     /**
