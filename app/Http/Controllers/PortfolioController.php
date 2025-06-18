@@ -16,6 +16,9 @@ class PortfolioController extends Controller
     {
         logger($request->keyword); // storage/logs/laravel.log
         logger('Helo');
+        //logger($request->keyword); // storage/logs/laravel.log
+
+        logger('疲れれるぜ！');
         logger($portfolios = Portfolio::all()->toArray());
 
         return response()->json($portfolios);
