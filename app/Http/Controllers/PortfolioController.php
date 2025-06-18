@@ -14,8 +14,8 @@ class PortfolioController extends Controller
      */
     public function index(Request $request)
     {
-        //logger($request->keyword); // storage/logs/laravel.log
-
+        logger($request->keyword); // storage/logs/laravel.log
+        logger('Helo');
         logger($portfolios = Portfolio::all()->toArray());
 
         return response()->json($portfolios);
