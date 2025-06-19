@@ -19,6 +19,8 @@ class PortfolioController extends Controller
         //logger($request->keyword); // storage/logs/laravel.log
 
         logger('疲れれるぜ！');
+        logger('Heloworlds');
+        logger("#########end#######");
         logger($portfolios = Portfolio::all()->toArray());
 
         return response()->json($portfolios);
@@ -30,7 +32,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resource.s
      */
     public function create()
     {
